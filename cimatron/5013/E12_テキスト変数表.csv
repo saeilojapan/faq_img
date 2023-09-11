@@ -1,0 +1,125 @@
+*                     Symbolic Text file  ,,,,,
+*,,,,,
+* The purpose of this file is to define the symbolic text for drafting document,,,,,
+* or template file.,,,,,
+*                                                                  ,,,,,
+"* This file contains 6 columns: Symbolic-Text word, PDM attributes/  ERP file, ",,,,,
+"* Application ,Units, Relocated and Description.",,,,,
+*                                                                  ,,,,,
+* The Symbolic-Text word column presents the name of the attribute   ,,,,,
+* from the pdm/xml.                                     ,,,,,
+*                                                                  ,,,,,
+* The  PDM attributes/  ERP file column presents the name of the attribute    ,,,,,
+* This column is not to be translated.,,,,,
+*,,,,,
+* The Application column presents the application from which the data is taken from ( represented as a number),,,,,
+" * 1= View_data, 2 = Drafting, 3 =Modeling, 4 = Electrode.",,,,,
+* You can also use the name of the application but it needs to be the same as the name in the string table,,,,,
+*,,,,,
+* The Units column determines whether the parameter is unit dependent or not.,,,,,
+"* 0= unit independent (same result for inch or mm) , 1= unit dependent ( different result for inch or mm)",,,,,
+*,,,,,
+*,,,,,
+* The Relocated is relevant only for the electrode application. This parameter detemines whether to display,,,,,
+the data of external electrods as N/R or to show the real values.,,,,,
+"* 0=show real values, 1= show N/R string or another string that is defined in the string table.",,,,,
+*,,,,,
+* The Description column is optional and it describes the symbolic text parameter for documenatary.,,,,,
+*                                                                  ,,,,,
+* How to add a new attribute to the file ?                           ,,,,,
+* 1) Add the symbolic text word to the first column. ( It can be a translated name)          ,,,,,
+* 2) Add the DM attribute name to the second column.( It must be in english-unless you translate the DM attributes names,,,,,
+"* 3) Select the application from which you want to read the data.  1= View_data, 2 = Drafting, 3 =Modeling, 4 = Electrode  ",,,,,
+*     to the third column.                   ,,,,,
+* 4) Select 1 in the fourth column if the parameter is unit dependent or 0 if the parameter is unit independent,,,,,
+* 5) Select 0 in the fifth column for general use. If the parameter is relevant to an external electrode ,,,,,
+*     and the data might be incorrect then select 1,,,,,
+*,,,,,
+*                           ,,,,,
+,,,,,
+* Symbolic-Text word,PDM attributes/  ERP file,Application,Units,Relocated,Description
+,,,,,
+Drafting_ID_NUMBER-FIRST_LEVEL,PartIdNumberFirstLevel,3,0,0,第一段レベル
+Drafting_ID_NUMBER-ALL_PARTS,PartIdNumberAllParts,3,0,0,IDナンバー
+Drafting_ID_NUMBER-PURCHASE_LIST,PartIdNumberPurchaseList,3,0,0,購入リスト
+scale,Scale,1,0,0,尺度
+view_name,View_Name,1,0,0,ﾋﾞｭｰ名
+sheet_name,Sheet_Name,2,0,0,シート名
+dwg_no,CN_TITLE,2,0,0,図面名
+sheets,Number_of_sheets,2,0,0,シートの枚数
+sheet_number,Sheet_number,2,0,0,シート数
+dwg_description,CN_DESCRIPTION,2,0,0,図面の詳細
+part_name,CN_TITLE,3,0,0,ﾊﾟｰﾂ名
+part_description,CN_DESCRIPTION,3,0,0,ﾊﾟｰﾂの詳細
+Blank_type,CIMELEC::BLANK_TYPE,4,0,0,ﾌﾞﾗﾝｸﾀｲﾌﾟ
+Blank_length,CIMELEC::BLANK_LENGTH,4,1,0,ﾌﾞﾗﾝｸ長さ
+Blank_width,CIMELEC::BLANK_WIDTH,4,1,0,ﾌﾞﾗﾝｸ幅
+Blank_height,CIMELEC::BLANK_HEIGHT,4,1,0,ﾌﾞﾗﾝｸ高さ
+Blank_rotate,CIMELEC::BLANK_ROTATE ,4,0,0,ﾌﾞﾗﾝｸ回転
+Blank_origin_x,CIMELEC::BLANK_ORIGIN_X,4,1,1,ﾌﾞﾗﾝｸ原点X
+Blank_origin_y,CIMELEC::BLANK_ORIGIN_Y,4,1,1,ﾌﾞﾗﾝｸ原点Y
+Blank_origin_z,CIMELEC::BLANK_ORIGIN_Z,4,1,1,ﾌﾞﾗﾝｸ原点Z
+Base_length,CIMELEC::BASE_LENGTH,4,1,1,ベース長さ
+Base_width,CIMELEC::BASE_WIDTH,4,1,1,ベース幅
+clearance,CIMELEC::BLANK_CLEARANCE,4,1,0,ﾌﾞﾗﾝｸｸﾘｱﾗﾝｽ
+allowance,CIMELEC::BLANK_ALLOWANCE,4,1,0,ﾌﾞﾗﾝｸ許容値
+Base_height,CIMELEC::BASE_HEIGHT,4,1,0,ﾍﾞｰｽ高さ
+Burn_UCS_x,CIMELEC::BURN_UCS_ORIGIN_X,4,1,1,電極の座標系原点X
+Burn_UCS_y,CIMELEC::BURN_UCS_ORIGIN_Y,4,1,1,電極の座標系原点Y
+Burn_UCS_z,CIMELEC::BURN_UCS_ORIGIN_Z,4,1,1,電極の座標系原点Z
+Quantity_1,CIMELEC::QUANTITY_1,4,0,0,電極のﾎﾙﾀﾞ番号1
+Quantity_2,CIMELEC::QUANTITY_2,4,0,0,電極のﾎﾙﾀﾞ番号2
+Quantity_3,CIMELEC::QUANTITY_3,4,0,0,電極のﾎﾙﾀﾞ番号3
+Quantity_4,CIMELEC::QUANTITY_4,4,0,0,電極のﾎﾙﾀﾞ番号4
+Spark_gap_1,CIMELEC::SPARK_GAP_1,4,1,0,電極の放電ｷﾞｬｯﾌﾟ1
+Spark_gap_2,CIMELEC::SPARK_GAP_2,4,1,0,電極の放電ｷﾞｬｯﾌﾟ2
+Spark_gap_3,CIMELEC::SPARK_GAP_3,4,1,0,電極の放電ｷﾞｬｯﾌﾟ3
+Spark_gap_4,CIMELEC::SPARK_GAP_4,4,1,0,電極の放電ｷﾞｬｯﾌﾟ4
+Orbit_type_1,CIMELEC::ORBIT_TYPE_1,4,0,0,電極の揺動ﾀｲﾌﾟ1
+Orbit_type_2,CIMELEC::ORBIT_TYPE_2,4,0,0,電極の揺動ﾀｲﾌﾟ2
+Orbit_type_3,CIMELEC::ORBIT_TYPE_3,4,0,0,電極の揺動ﾀｲﾌﾟ3
+Orbit_type_4,CIMELEC::ORBIT_TYPE_4,4,0,0,電極の揺動ﾀｲﾌﾟ4
+Orbit_value_1,CIMELEC::ORBIT_VALUE_1,4,1,0,電極の揺動値1
+Orbit_value_2,CIMELEC::ORBIT_VALUE_2,4,1,0,電極の揺動値2
+Orbit_value_3,CIMELEC::ORBIT_VALUE_3,4,1,0,電極の揺動値3
+Orbit_value_4,CIMELEC::ORBIT_VALUE_4,4,1,0,電極の揺動値4
+Offset_1,CIMELEC::OFFSET_1,4,1,0,電極のｵﾌｾｯﾄ1（荒）
+Offset_2,CIMELEC::OFFSET_2,4,1,0,電極のｵﾌｾｯﾄ2（中仕げ）
+Offset_3,CIMELEC::OFFSET_3,4,1,0,電極のｵﾌｾｯﾄ3（仕上げ）
+Offset_4,CIMELEC::OFFSET_4,4,1,0,電極のｵﾌｾｯﾄ4（磨き）
+Elec_Material,CIMELEC::MATERIAL,4,0,0,電極の材質
+Part_Revision,TMPL::Revision,3,0,0,ﾊﾟｰﾂのﾊﾞｰｼﾞｮﾝ
+Dwg_Revision,TMPL::Revision,2,0,0,図面のﾊﾞｰｼﾞｮﾝ
+Part_Designed_by,TMPL::Designed_by,3,0,0,ﾊﾟｰﾂの設計者
+Dwg_Designed_by,TMPL::Designed_by,2,0,0,図面の設計者
+Part_Approved_by,TMPL::Approved_by,3,0,0,ﾊﾟｰﾂの承認者
+Dwg_Approved_by,TMPL::Approved_by,2,0,0,図面の承認者
+Part_Comment,TMPL::Comment,3,0,0,ﾊﾟｰﾂの備考
+Dwg_Comment,TMPL::Comment,2,0,0,図面の備考
+Part_Type,TMPL::Part_Type,3,0,0,ﾊﾟｰﾂのﾀｲﾌﾟ
+Part_Short_Type,TMPL::Short_Type,3,0,0,ﾊﾟｰﾂの短い名前
+Part_Standard_Number,TMPL::Standard_Number,3,0,0,ﾊﾟｰﾂ番号
+Part_Stock_Size,TMPL::Stock_Size,3,0,0,ｽﾄｯｸｻｲｽﾞ
+Part_Vendor,TMPL::Vendor,3,0,0,ﾒｰｶｰ（この項目はプロパティ欄に作成しなければ存在しません）
+Part_Material,TMPL::Material,3,0,0,ﾊﾟｰﾂの材質
+Part_Heat_Treatment,TMPL::Heat_Treatment,3,0,0,ﾊﾟｰﾂの熱処理
+Part_Hardness,TMPL::Hardness,3,0,0,ﾊﾟｰﾂの硬度
+Part_Path,Path,3,0,0,ﾊﾟｰﾂのﾌｫﾙﾀﾞﾊﾟｽ
+Dwg_Path,Path,2,0,0,図面のﾌｫﾙﾀﾞﾊﾟｽ
+Dwg_Drawn_by,TMPL::Drawn_by,2,0,0,図面の作図者
+Dwg_Creation_Date,Cim_E_CREATION_DATE,2,0,0,図面の作成日付
+Part_Creation_Date,Cim_E_CREATION_DATE,3,0,0,ﾊﾟｰﾂの作成日付
+Dwg_Modification_Date,Cim_E_MODIFICATION_DATE,2,0,0,図面の修正日付
+Part_Modification_Date,Cim_E_MODIFICATION_DATE,3,0,0,ﾊﾟｰﾂの修正日付
+Part_Catalog,DMCATALOG::Catalog,3,0,0,ﾊﾟｰﾂｶﾀﾛｸﾞ
+Part_Category,DMCATALOG::Category,3,0,0,ﾊﾟｰﾂの区分
+Part_Sub-Category,DMCATALOG::SubCategory,3,0,0,ﾊﾟｰﾂの下位区分
+Part_Visible_Part_Size,TMPL::Visible_Part_Size,3,0,0,可視パーツサイズ
+Part_Visible_Part_Size-Manual,TMPL::Visible_Part_Size-Manual,3,0,0,可視パーツサイズ-手動
+Elec_Comment,CIMELEC::EL_NOTE,4,0,0,電極コメント
+MATERIAL_1,CIMELEC::MATERIAL_1,4,0,0,材質１
+MATERIAL_2,CIMELEC::MATERIAL_2,4,0,0,材質２
+MATERIAL_3,CIMELEC::MATERIAL_3,4,0,0,材質３
+MATERIAL_4,CIMELEC::MATERIAL_4,4,0,0,材質４
+Version,Version,1,0,0,バージョン
+Units,Units,1,0,0,単位
