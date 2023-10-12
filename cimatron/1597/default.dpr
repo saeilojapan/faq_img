@@ -1,85 +1,253 @@
+## DXF Utilities parameter file 
+
+## Rules
+########
+
+## Empty lines are ignored.
+## Line starting with '##' indicates comment-line and is ignored.
+## Order of lines is not important.
+## Case of letters is not important (except of file names - Cimatron rules).
+## Each line starts with a keyword.
+## To continue arguments on next line finish line with \<CR> 
+## and continue on next line.
+## If same keyword appears more than once:
+##    - If it can be accumulated - it will,
+##    - else the last line is considered the right.
+## Line '##!!! OLD_ALGORITHM {YES|NO}' indicates Data interface version
+
+## Syntax of this specification:
+################################
+
+##  |  - separates between different options to argument.
+## {A} - argument is required.
+## [A] - argument is optional.
+## (n-m) - range of possible values.
+## <A> - argument is the default value if no value is given.
+## Upper case words are constatnts (fixed), and lower case are variables.
+## ASK means the user will be asked during program operation.
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <!--meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/-->
-        <title>セイロジャパンサポートセンター ログイン</title>
-        <link href="/faq/Content/Pc/Themes/CommonPC.css?v=1.0.0.0" rel="stylesheet" type="text/css" />
-        <link href="/faq/Css/Custom?v=4ycndfplr4wdawn1tg1gprgg&amp;dispNodeId=0" rel="stylesheet" type="text/css" />
-        <script src="/faq/Content/Pc/Scripts/jquery-1.7.1.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/jquery-ui-1.9.2.custom.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/jquery.ah-placeholder.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/jquery.easytabs.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/jquery.hashchange.min.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/page.common.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/page.faqsearch.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/page.divhideb.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/page.login.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/faqknowledge_autocomplete.js?v=1.0.0.0" type="text/javascript"></script>
-       
-</head>
-<body>
+## Syntax of DXF parameters options:
+#####################################
 
-<form action="/faq/Login/Index?dispNodeId=0" method="post"><input name="__RequestVerificationToken" type="hidden" value="1b5GsolZCaGMe2UTsIPEd8NQBjtOjXXMdGCUhgm1fmlLLfl1tf-2-Ho_StvdHMxAzscyAzoEMNifidA27xwVhmB-kMXwF1dclSlUTjuwFwspKWTzBJbsj8BBLIhT-igzWGaoBI7fHhMDnA8wc9B4qAL_pNdEdEbkQN0ECZ03Xds1" />    <div id="loginframe">
-        <p style="border:0; margin: 0px 0px 7px 0px;">
-            <img src="/faq/Temp/Pc/Logo/tempLogo.gif"
-                alt="セイロジャパンサポートセンター" class="top-logo" />
-        </p>
-            <input name="__RequestVerificationToken" type="hidden" value="nx_6pN26Hq8mT-Ve8ad1SUtX2zXb6l6sbVjuhAM4Eq8SM5gcEEzJeC4MeDdPBjMfADszyOYcpiA5B36oNwqMy_eJzJAN-NZxYEwW_diPzi1PDhcp_49r5n-0QztCB01d5I0KJyRg5gmGynStBgf_B9dUu0zhuPbTfl3BKaq4jmY1" />
-        <div id="loginbox" class="index_category_2column_box" style="">
-            <div>
-                <!-- user id textbox -->
-                <div>
-                    <input data-val="true" data-val-regex="半角英数字、記号(-_.)のみ入力できます。" data-val-regex-pattern="^[a-zA-Z0-9_.-]*$" data-val-required="ユーザーIDを入力して下さい。" id="userId" name="userId" placeholder="ユーザーID" type="text" value="" />                    
-                </div>
+##  DXF INTERACTION PARAMETERS:
+##==============================
 
-                <!-- password textbox -->
-                <div>
-                    <input data-val="true" data-val-required="パスワードを入力して下さい。" id="password" name="password" placeholder="パスワード" type="password" />                    
-                </div>
+## Mode of operation for read-dxf. Optional backup for batch mode.
+## SELECT R-MODE                  {<ASK> | INTER | BATCH}    [BACKUP | <NOBACKUP>]
 
-                <!-- login button -->
-                <div>
-                    <input type="submit" value="ログイン" id="bttLogin" class="buttonColor"/>
-                </div>
-            </div>
-        </div>
+## Mode of operation for write-iges.
+## SELECT W-MODE                  {<ASK> | INTER | BATCH} 
 
-        <div id="loginMessage">
-        <span class="field-validation-valid" data-valmsg-for="userId" data-valmsg-replace="true" style="color:red;"></span>
-        <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true" style="color:red;"></span>
-        </div>
-	<br/>
-	<div id="comment" style="width:600px;text-align:center;margin-left:-40px;top: 105%;position: absolute;">
-	サポート保守契約をご締結いただいたお客様専用のページです。<br>
-	閲覧される方は、弊社より案内させていただいているIDとパスワードをご入力ください。<br>
-	※ご不明の場合は、製品ごとのサポート窓口へお問い合わせください。<br><br>
-	CimatronE：<A href="mailto:callcenter@saeilo.co.jp">callcenter@saeilo.co.jp</A><br>
-	GO2cam：<A href="mailto:go2support@saeilo.co.jp">go2support@saeilo.co.jp</A><br>
-	NCSIMUL：<A href="mailto:ncs-support@saeilo.co.jp">ncs-support@saeilo.co.jp</A><br>
-	</div>
-        <input id="ReturnControllerName" name="ReturnControllerName" type="hidden" value="Faq" />
-        <input id="ReturnActionName" name="ReturnActionName" type="hidden" value="DownloadFile" />
-        <input id="ReturnParameters" name="ReturnParameters" type="hidden" value="fileName=default.dpr&amp;fileName=default.dpr" />
-    </div>
-    <!--  footer part Start -->
-            <div id="loginFooter" class="footerColor">
-                <div class="foot_lnk">
-                    <!-- 会社リンク１ -->
+## Logfile control: YES - logfile, NO - screen.
+## SELECT R-LOG-FILE              {YES | NO | <ASK>}
 
-                    <!-- 会社リンク2 -->
-                    
-                    <!-- 会社リンク3 -->
-                    
-                    <!-- 会社リンク4-->
+## SELECT W-LOG-FILE              {YES | NO | <ASK>}
 
-                    <!-- 会社リンク5 -->
-                </div>
-                <!-- Copyright -->
-                <div class="foot_copy">Copyright (c) 2023 SAEILO JAPAN, Inc. All Rights Reserved.</div>
-            </div>
-    <!--  footer part End -->
-</form>
-</body>
-</html>
+## INPUT DXF FILE PARAMETERS:
+##===========================
+
+## DXF file units
+## SET    R-UNITS                 { <MM> | CM | METER | INCH | FEET | FILE-UNITS}
+
+## Read dimensions as group or as dimension.
+## SELECT R-DIMENSION-AS          {<GROUP> | DIMENSION}
+
+## Read ATTDEF and ATTRIB DXF entities as Note or as Attribute records.
+## SELECT R-ATTRIBUTES-AS       { <NOTE> | ATTRIBUTES }
+
+## DXF thickness 
+## SELECT R-THICKNESS             {<IMPLEMENT> | IGNORE}
+
+## Use POLYLINE display point to create POLYLINE (curves) in Cimatron.
+## SELECT R-POLYLINE-DISPLAY-POINTS    {<IGNORE> | USE}
+
+## Translate 3DFACE entities boundaries only.
+## SELECT R-3DFACE-AS      {<PLFACE> | BOUNDARIES}
+
+## Place Drafting entities 
+## SELECT R-DRAFTING-ENTITIES-TO {<MODEL> | VIEW}
+
+## Translate Paper-Space
+## SELECT R-PAPER-SPACE {<YES> | NO}
+
+## Split to many pfm file, in order to process more that 64,000 entities
+## SELECT R-SPLIT-FILE          {<OFF>| ON}
+
+## OUTPUT DXF FILE PARAMETERS:
+##============================
+
+## Write dimensions as group or as dimension.
+## SELECT W-DIMENSION-AS          {<GROUP> | DIMENSION}
+
+## Explode SOLID model to surfaces, boundaries or both.
+## SELECT W-SOLID-EXPLODE-AS      {SURFACES | BOUNDARIES | <BOTH>}
+
+## Ignore assembly suppressed parts.
+## SELECT W-IGNORE-SUPPRESSED-PARTS { <NO> | YES }
+
+## Set levels mask as in Cimatron part-file, or set all levels ON.
+## SELECT W-LEVEL-MASK            {<ALL-ON> | AS-IS} 
+
+## Tolerance for writing approximation.
+## SET    W-TOL                   {approximation-tolerance(0.001-100) <0.1>}
+
+## Number of precision digits
+## SET    W-PRECISION             {precision(1-9) <6>}
+
+## Save file as AutoCAD file version12/13/14/2000/2000i.
+## SELECT W-FILE-AS				  {AUTOCAD12 | AUTOCAD13 | <AUTOCAD14> | AUTOCAD2000 | AUTOCAD2000i}
+
+## Write views as 2D or 3D.
+## SELECT W-3D-VIEW-AS			  {2D | <3D>}
+
+## External instances grouped or exploded.
+## SELECT W-EXTERNAL-EXPLODE {YES | <NO>}
+
+## Subview instances grouped or exploded.
+## SELECT W-SUBVIEW-INSTANCE-EXPLODE {YES | <NO>}
+
+## Write notes as AutoCAD TEXT or as AutoCAD MTEXT.
+## SELECT W-NOTE-AS 			  {TEXT | <MTEXT>}
+
+## Approximate all curves to polygon.
+## SELECT W-CRV-TO-POLYGON {<YES> | NO}
+
+##  CONVERSIONS:
+##==================
+
+## Text conversion for Read/Write DXF utility, 
+## MAP    TEXT   {DXF-font}   {cim-font}  [ {char-mapping-area-number | DEFAULT} \
+   [ { NONE | 8BIT | 16BIT | KEYBOARD } [REVERSE] ] ]
+
+## Text conversion for Read DXF utility, 
+## MAP  R-TEXT   {DXF-font}   {cim-font}  [ {char-mapping-area-number | DEFAULT} \
+   [ { NONE | 8BIT | 16BIT | KEYBOARD } [REVERSE] ] ]
+
+## Text conversion for Write DXF utility, 
+## MAP  W-TEXT   {DXF-font}   {cim-font}  [ {char-mapping-area-number | DEFAULT} \
+   [ { NONE | 8BIT | 16BIT | KEYBOARD } [REVERSE] ] ]
+
+## WARNING !!!
+## Remember that char-mapping-area-number in all MAP TEXT statements
+## must be a hexadecimal number.
+
+## Line-font conversion for Read/Write DXf utility, 
+## DXF line-font with Cimatron equivalent line-font
+## MAP    LINE-FONT               {dxf-line-font}  {cim-line-font(1-8)}
+
+## Line-font conversion for Read DXf utility, 
+## DXF line-font with Cimatron equivalent line-font 
+## MAP    R-LINE-FONT             {dxf-line-font}  {cim-line-font(1-8)}
+
+## Line-font conversion for Write DXf utility, 
+## Cimatron line-font with equivalent DXF line-font 
+## MAP    W-LINE-FONT             {dxf-line-font}  {cim-line-font(1-8)}
+
+## Color conversion, DXF color with Cimatron equivalent color.
+## MAP    COLOR                   {dxf-color}  {cim-color(1-15)}
+
+## Color-Pen conversion, DXF color with Cimatron pen.
+## MAP    PEN                     {dxf-color}  {cim-pen(1-8)}
+
+##  GENERAL:
+##==========
+
+## Nested parameters files.
+## USE    FILE                    {file-pathname}
+
+
+
+###################################################################
+
+## Defaults:
+##==========
+
+SELECT R-MODE      ASK
+SELECT R-LOG-FILE  ASK
+
+SELECT W-MODE      ASK
+SELECT W-LOG-FILE  ASK
+
+## Input defaults:
+##================
+
+SELECT R-DIMENSION-AS             GROUP
+SELECT R-ATTRIBUTES-AS            NOTE
+SELECT R-THICKNESS                IMPLEMENT
+SELECT R-POLYLINE-DISPLAY-POINTS  IGNORE
+SELECT R-3DFACE-AS      		  PLFACE
+SELECT R-DRAFTING-ENTITIES-TO	  MODEL
+SELECT R-PAPER-SPACE		 	  YES
+SET    R-UNITS                    FILE-UNITS
+SELECT R-SPLIT-FILE          	  OFF
+
+## Output defaults:
+##=================
+
+SELECT W-DIMENSION-AS           GROUP
+SELECT W-SOLID-EXPLODE-AS  		BOTH
+SELECT W-IGNORE-SUPPRESSED-PARTS NO
+SELECT W-LEVEL-MASK  			ALL-ON
+SELECT W-FILE-AS				AUTOCAD14
+SELECT W-3D-VIEW-AS				3D
+SELECT W-EXTERNAL-EXPLODE		NO
+SELECT W-SUBVIEW-INSTANCE-EXPLODE NO
+SELECT W-NOTE-AS			    MTEXT
+SELECT W-CRV-TO-POLYGON			YES
+SET W-TOL                  0.1
+SET W-PRECISION            6
+
+## Default line-font mapping
+##==========================
+MAP    R-LINE-FONT  DASHED       4
+MAP    R-LINE-FONT  HIDDEN       2
+MAP    R-LINE-FONT  CENTER       1
+MAP    R-LINE-FONT  PHANTOM      1
+MAP    R-LINE-FONT  DOT          5
+MAP    R-LINE-FONT  DASHDOT      3
+MAP    R-LINE-FONT  BORDER       1
+MAP    R-LINE-FONT  DIVIDE       1
+MAP    R-LINE-FONT  CONTINUOUS   1
+
+
+## Default color mapping
+##======================
+MAP    COLOR      1   2
+MAP    COLOR      2   3
+MAP    COLOR      3   7
+MAP    COLOR      4   5
+MAP    COLOR      5   4
+MAP    COLOR      6   6
+MAP    COLOR      7   1
+
+## Font mapping:
+##==============
+
+## NOTE :
+## To use texts in Japanese, please uncomment following statement:
+
+##MAP    TEXT    STANDARD    standard  80 16BIT
+
+## Also you need to replace your rdxf.cdt and wdxf.cdt files in directory
+## cadsys/fonts or cim90dat/fonts with rdxfjpn.cdt and wdxfjpn.cdt !!!
+
+
+## SELECT W-APPLICATION SPLIT MODEL
+## SELECT W-APPLICATION SPLIT VIEW
+## SELECT W-APPLICATION SPLIT DRAWING
+
+## SELECT W-APPLICATION [SPLIT | NOT] {MODEL}
+## SELECT W-APPLICATION [SPLIT | NOT] {VIEW [view-name(s)]}
+## SELECT W-APPLICATION [SPLIT | NOT] {DRAWING [drawing-name(s)]}
+## SELECT W-APPLICATION [SPLIT | NOT] {SHEET [sheet-name(s)]}
+
+## SELECT W-ATTRIBUTES [NOT] {LEVEL level-name(s)}
+## SELECT W-ATTRIBUTES [NOT] {LINE-FONT line-font-name(s)}
+## SELECT W-ATTRIBUTES [NOT] {COLOR color-namber(s)}
+## SELECT W-ATTRIBUTES [NOT] {PEN pen-namber(s)}
+## SELECT W-ATTRIBUTES [NOT] {BLANK}
+## SELECT W-ATTRIBUTES [NOT] {SET SURFACES}
+## SELECT W-ATTRIBUTES {FILTER <AND> | OR}
+
+##!!! OLD_ALGORITHM NO
