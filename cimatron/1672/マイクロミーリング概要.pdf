@@ -1,12 +1,12 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <!--meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/-->
-        <title>セイロジャパンサポートセンター ログイン</title>
+        <title>セイロジャパンサポートセンター </title>
         <link href="/faq/Content/Pc/Themes/CommonPC.css?v=1.0.0.0" rel="stylesheet" type="text/css" />
-        <link href="/faq/Css/Custom?v=scvkp4aw4igoffdjufqzqfkc&amp;dispNodeId=0" rel="stylesheet" type="text/css" />
+        <link href="/faq/Css/Custom?v=5kcfawycz5cjz1sb1e2mn4jw&amp;dispNodeId=0" rel="stylesheet" type="text/css" />
+        
         <script src="/faq/Content/Pc/Scripts/jquery-1.7.1.js?v=1.0.0.0"  type="text/javascript"></script>
         <script src="/faq/Content/Pc/Scripts/jquery-ui-1.9.2.custom.js?v=1.0.0.0"  type="text/javascript"></script>
         <script src="/faq/Content/Pc/Scripts/jquery.ah-placeholder.js?v=1.0.0.0"  type="text/javascript"></script>
@@ -15,71 +15,101 @@
         <script src="/faq/Content/Pc/Scripts/page.common.js?v=1.0.0.0"  type="text/javascript"></script>
         <script src="/faq/Content/Pc/Scripts/page.faqsearch.js?v=1.0.0.0"  type="text/javascript"></script>
         <script src="/faq/Content/Pc/Scripts/page.divhideb.js?v=1.0.0.0"  type="text/javascript"></script>
-        <script src="/faq/Content/Pc/Scripts/page.login.js?v=1.0.0.0"  type="text/javascript"></script>
         <script src="/faq/Content/Pc/Scripts/faqknowledge_autocomplete.js?v=1.0.0.0" type="text/javascript"></script>
-       
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*$('#header').css("background-image", "url(' ')");*/
+        });
+    </script>
+ 
 </head>
 <body>
+<!--  wrapper Start -->
+<div  id="wrapper">
+    <!--  header part Start -->
 
-<form action="/faq/Login/Index?dispNodeId=0" method="post"><input name="__RequestVerificationToken" type="hidden" value="JESJfunQkGlrrBaRI8B3oI-Ej7JHW4di1MT7qBZC9_4IHi5xzabp2XU69GNyo6z-2s47WzZu5J84N6aQPlEqM8B4dc4WJRY7bficWb_5R8ln6L7BIVTCwv-5uLGHakYpOMEcm53EVmAAkpV7iMt-0tVdnAprQU6jxog18ja-1gk1" />    <div id="loginframe">
-        <p style="border:0; margin: 0px 0px 7px 0px;">
-            <img src="/faq/Temp/Pc/Logo/tempLogo.gif"
-                alt="セイロジャパンサポートセンター" class="top-logo" />
-        </p>
-            <input name="__RequestVerificationToken" type="hidden" value="U520JYX6NbyIEHARnz_zxxUKHReO9uQMUClnNe_Vv8Cda-7pGSzh17eIXx1ZyTU21XemBQJ9Xx6a-EBdI1G-VoIK-qBz7fjPdOiZXHCMWziLEtCuAIc80sGRN0EsyleWIKE5IhbFjgjwjS9IkVEwqhKkXgOck4030ej2XyfqJe81" />
-        <div id="loginbox" class="index_category_2column_box" style="">
-            <div>
-                <!-- user id textbox -->
-                <div>
-                    <input data-val="true" data-val-regex="半角英数字、記号(-_.)のみ入力できます。" data-val-regex-pattern="^[a-zA-Z0-9_.-]*$" data-val-required="ユーザーIDを入力して下さい。" id="userId" name="userId" placeholder="ユーザーID" type="text" value="" />                    
-                </div>
-
-                <!-- password textbox -->
-                <div>
-                    <input data-val="true" data-val-required="パスワードを入力して下さい。" id="password" name="password" placeholder="パスワード" type="password" />                    
-                </div>
-
-                <!-- login button -->
-                <div>
-                    <input type="submit" value="ログイン" id="bttLogin" class="buttonColor"/>
-                </div>
+    <div id="header" class="">
+        <div class="faq_head">
+            <h1>
+                <a href="/faq/?dispNodeId=0">
+                    <img src="/faq/Temp/Pc/Logo/tempLogo.gif"
+                        alt="セイロジャパンサポートセンター" class="top-logo" />
+                </a>
+            </h1>
+            <div class="head_lnk">
+              <p>
+                <span>
+                    <img src="/faq/Content/Pc/Images/help_base.png" class="index_icons_color"/><span><a href="/faq/Help?dispNodeId=0">ヘルプ</a></span>
+                </span>
+              </p>
             </div>
+            <br class="clearf" />
         </div>
-
-        <div id="loginMessage">
-        <span class="field-validation-valid" data-valmsg-for="userId" data-valmsg-replace="true" style="color:red;"></span>
-        <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true" style="color:red;"></span>
-        </div>
-	<br/>
-	<div id="comment" style="width:600px;text-align:center;margin-left:-40px;top: 105%;position: absolute;">
-	サポート保守契約をご締結いただいたお客様専用のページです。<br>
-	閲覧される方は、弊社より案内させていただいているIDとパスワードをご入力ください。<br>
-	※ご不明の場合は、製品ごとのサポート窓口へお問い合わせください。<br><br>
-	CimatronE：<A href="mailto:callcenter@saeilo.co.jp">callcenter@saeilo.co.jp</A><br>
-	GO2cam：<A href="mailto:go2support@saeilo.co.jp">go2support@saeilo.co.jp</A><br>
-	NCSIMUL：<A href="mailto:ncs-support@saeilo.co.jp">ncs-support@saeilo.co.jp</A><br>
-	</div>
-        <input id="ReturnControllerName" name="ReturnControllerName" type="hidden" value="Faq" />
-        <input id="ReturnActionName" name="ReturnActionName" type="hidden" value="DownloadFile" />
-        <input id="ReturnParameters" name="ReturnParameters" type="hidden" value="fileName=%e3%83%9e%e3%82%a4%e3%82%af%e3%83%ad%e3%83%9f%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e6%a6%82%e8%a6%81.pdf&amp;fileName=%e3%83%9e%e3%82%a4%e3%82%af%e3%83%ad%e3%83%9f%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0%e6%a6%82%e8%a6%81.pdf" />
     </div>
+    <!--  header part End -->
+
+    <!--  main content part Start -->
+ 
+        
+     <div id="main_contents">
+     <div class="contents_body">
+         <div class="cat_block" style="width: 100%;">
+		 <br /><br /><br />
+         選択したファイルは存在しません。
+
+        <div class="submit_menu clearfix" style="width: 100%">
+	        <div class="sm_right"><a href="/faq/">FAQトップページへ</a></div>
+        </div>
+        </div>
+    </div>
+
+	        
+    <!--  main content part End -->
+
     <!--  footer part Start -->
-            <div id="loginFooter" class="footerColor">
-                <div class="foot_lnk">
-                    <!-- 会社リンク１ -->
+            <br class="clearf" />
+            <div id="footer">
+                <div class="foot_body">
+                    <div class="foot_lnk">
+                    <p>
+                        <!--  [FAQが見つからない場合]表示．非表示チェック -->
+                           ｜<a href="/faq/Help?dispNodeId=0">ヘルプ</a> ｜
 
-                    <!-- 会社リンク2 -->
-                    
-                    <!-- 会社リンク3 -->
-                    
-                    <!-- 会社リンク4-->
+                        
+                                    <a href="/faq/Account/Logout?dispNodeId=0">ログアウト</a> ｜
+                           <br />
+                        <!-- 会社リンク１ -->
 
-                    <!-- 会社リンク5 -->
+                        <!-- 会社リンク2 -->
+                    
+                        <!-- 会社リンク3 -->
+                    
+                        <!-- 会社リンク4-->
+
+                        <!-- 会社リンク5 -->
+                    </p>
+                    </div>
+                    <!-- Copyright -->
+                    <div class="foot_copy">
+                    <p>Copyright (c) 2023 SAEILO JAPAN, Inc. All Rights Reserved.</p>
+                    </div>
+                    <br class="clearf" />
                 </div>
-                <!-- Copyright -->
-                <div class="foot_copy">Copyright (c) 2023 SAEILO JAPAN, Inc. All Rights Reserved.</div>
             </div>
     <!--  footer part End -->
-</form>
+</div>
+<!--  wrapper End -->
+
+        <input type="hidden" id="siteUrl" value="https://faq.saeilo.co.jp/faq/" />
+        <input type="hidden" id="hidenDispNode" value="0" />
+        <input type="hidden" id="hidenCid" value="" />
+        <input type="hidden" id="AutoCompleteApiUrl" value="/ttlfaq_api/Service.asmx/getSuggest" />
+      
+      <input type="hidden" id="contentUrl" value="/faq/" />
+
+      <input id="clearKeyword" name="clearKeyword" type="hidden" value="2" />
+      <input id="fixHeader" name="fixHeader" type="hidden" value="1" />
 </body>
 </html>
+
