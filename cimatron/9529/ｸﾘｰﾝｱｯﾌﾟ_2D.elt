@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!--meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/-->
+        <title>セイロジャパンサポートセンター </title>
+        <link href="/faq/Content/Pc/Themes/CommonPC.css?v=1.0.0.0" rel="stylesheet" type="text/css" />
+        <link href="/faq/Css/Custom?v=opohc1mjcvrjefa22kssmsak&amp;dispNodeId=0" rel="stylesheet" type="text/css" />
+        
+        <script src="/faq/Content/Pc/Scripts/jquery-1.7.1.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/jquery-ui-1.9.2.custom.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/jquery.ah-placeholder.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/jquery.easytabs.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/jquery.hashchange.min.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/page.common.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/page.faqsearch.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/page.divhideb.js?v=1.0.0.0"  type="text/javascript"></script>
+        <script src="/faq/Content/Pc/Scripts/faqknowledge_autocomplete.js?v=1.0.0.0" type="text/javascript"></script>
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*$('#header').css("background-image", "url(' ')");*/
+        });
+    </script>
+ 
+</head>
+<body>
+<!--  wrapper Start -->
+<div  id="wrapper">
+    <!--  header part Start -->
+
+    <div id="header" class="">
+        <div class="faq_head">
+            <h1>
+                <a href="/faq/?dispNodeId=0">
+                    <img src="/faq/Temp/Pc/Logo/tempLogo.gif"
+                        alt="セイロジャパンサポートセンター" class="top-logo" />
+                </a>
+            </h1>
+            <div class="head_lnk">
+              <p>
+                <span>
+                    <img src="/faq/Content/Pc/Images/help_base.png" class="index_icons_color"/><span><a href="/faq/Help?dispNodeId=0">ヘルプ</a></span>
+                </span>
+              </p>
+            </div>
+            <br class="clearf" />
+        </div>
+    </div>
+    <!--  header part End -->
+
+    <!--  main content part Start -->
+ 
+        
+     <div id="main_contents">
+     <div class="contents_body">
+         <div class="cat_block" style="width: 100%;">
+		 <br /><br /><br />
+         選択したファイルは存在しません。
+
+        <div class="submit_menu clearfix" style="width: 100%">
+	        <div class="sm_right"><a href="/faq/">FAQトップページへ</a></div>
+        </div>
+        </div>
+    </div>
+
+	        
+    <!--  main content part End -->
+
+    <!--  footer part Start -->
+            <br class="clearf" />
+            <div id="footer">
+                <div class="foot_body">
+                    <div class="foot_lnk">
+                    <p>
+                        <!--  [FAQが見つからない場合]表示．非表示チェック -->
+                           ｜<a href="/faq/Help?dispNodeId=0">ヘルプ</a> ｜
+
+                        
+                                    <a href="/faq/Account/Logout?dispNodeId=0">ログアウト</a> ｜
+                           <br />
+                        <!-- 会社リンク１ -->
+
+                        <!-- 会社リンク2 -->
+                    
+                        <!-- 会社リンク3 -->
+                    
+                        <!-- 会社リンク4-->
+
+                        <!-- 会社リンク5 -->
+                    </p>
+                    </div>
+                    <!-- Copyright -->
+                    <div class="foot_copy">
+                    <p>Copyright (c) 2024 SAEILO JAPAN, Inc. All Rights Reserved.</p>
+                    </div>
+                    <br class="clearf" />
+                </div>
+            </div>
+    <!--  footer part End -->
+</div>
+<!--  wrapper End -->
+
+        <input type="hidden" id="siteUrl" value="https://faq.saeilo.co.jp/faq/" />
+        <input type="hidden" id="hidenDispNode" value="0" />
+        <input type="hidden" id="hidenCid" value="" />
+        <input type="hidden" id="AutoCompleteApiUrl" value="/ttlfaq_api/Service.asmx/getSuggest" />
+      
+      <input type="hidden" id="contentUrl" value="/faq/" />
+
+      <input id="clearKeyword" name="clearKeyword" type="hidden" value="2" />
+      <input id="fixHeader" name="fixHeader" type="hidden" value="1" />
+</body>
+</html>
+
